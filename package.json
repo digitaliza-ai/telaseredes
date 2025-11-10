@@ -1,0 +1,44 @@
+{
+  "name": "atelie-das-telas-react",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Website do Telas & Redes Paranavaí - Soluções em Telas e Redes de Proteção",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "next start",
+    "lint": "next lint",
+    "vite:dev": "vite",
+    "vite:build": "vite build",
+    "vite:preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "next": "^15.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "vite": "^7.1.7"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "telas",
+    "redes de proteção",
+    "mosquiteiro",
+    "paranavaí",
+    "maringá"
+  ],
+  "author": "Telas & Redes Paranavaí",
+  "homepage": "https://ateliedastelas.com"
+}
