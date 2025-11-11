@@ -18,6 +18,9 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#2C5530" />
         <meta name="msapplication-TileColor" content="#2C5530" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="google730885442f128acb" />
+        
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         
