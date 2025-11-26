@@ -184,7 +184,7 @@ const Products = () => {
               className={`filter-btn ${activeFilter === 'mosquiteiro' ? 'active' : ''}`}
               onClick={() => handleFilter('mosquiteiro')}
             >
-              Redes Mosquiteiro
+              Telas Mosquiteiro
             </button>
           </div>
 
