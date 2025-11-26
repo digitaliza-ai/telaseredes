@@ -6,6 +6,8 @@ const Products = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
   const [driveStatus, setDriveStatus] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
+  const [lightboxTitle, setLightboxTitle] = useState('');
 
   // Configuração da integração com Google Drive
   const DRIVE_FOLDERS = {
@@ -123,6 +125,38 @@ const Products = () => {
     }
   };
 
+  // Abrir lightbox
+  const openLightbox = (imageUrl, title) => {
+    setLightboxImage(imageUrl);
+    setLightboxTitle(title);
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Fechar lightbox
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    setLightboxTitle('');
+    document.body.style.overflow = 'auto';
+  };
+
+  // Fechar lightbox com ESC
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  // Tradução de categorias
+  const getCategoryName = (category) => {
+    const categories = {
+      'protecao': 'Proteção',
+      'mosquiteiro': 'Mosquiteiro'
+    };
+    return categories[category] || category;
+  };
+
   return (
     <>
       {/* Nova Seção de Produtos */}
@@ -167,7 +201,12 @@ const Products = () => {
               </div>
             ) : (
               filteredProducts.map((product) => (
-                <div key={product.id} className="product-card" data-category={product.category}>
+                <div 
+                  key={product.id} 
+                  className="product-card" 
+                  data-category={product.category}
+                  onClick={() => openLightbox(product.imageUrl, product.name)}
+                >
                   <div className="product-image">
                     <img 
                       src={product.imageUrl} 
@@ -177,7 +216,10 @@ const Products = () => {
                         e.target.src = 'https://via.placeholder.com/300x200/2a4d6e/ffffff?text=Imagem+Não+Carregada';
                       }}
                     />
-                    <div className="product-image-overlay">
+                    <div 
+                      className="product-image-overlay" 
+                      data-category={getCategoryName(product.category)}
+                    >
                       <h3 className="product-image-title">{product.name}</h3>
                     </div>
                   </div>
@@ -188,6 +230,29 @@ const Products = () => {
               ))
             )}
           </div>
+
+          {/* Modal Lightbox */}
+          {lightboxImage && (
+            <div 
+              className="lightbox-modal active" 
+              onClick={closeLightbox}
+            >
+              <div 
+                className="lightbox-content" 
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button 
+                  className="lightbox-close" 
+                  onClick={closeLightbox}
+                  aria-label="Fechar"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+                <img src={lightboxImage} alt={lightboxTitle} />
+                <div className="lightbox-title">{lightboxTitle}</div>
+              </div>
+            </div>
+          )}
 
         </div>
       </section>
