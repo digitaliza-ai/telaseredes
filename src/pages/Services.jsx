@@ -198,6 +198,92 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Additional Services Section */}
+      <section className="additional-services section-padding" id="additional-services">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Serviços Adicionais</span>
+            <h2 className="section-title">Cuidamos da sua Proteção</h2>
+          </div>
+
+          <div className="additional-services-grid">
+            {/* Manutenção */}
+            <div className="additional-service-card">
+              <div className="additional-service-icon">
+                <i className="fas fa-tools"></i>
+              </div>
+              <h3>Manutenção</h3>
+              <p>Manutenção preventiva e corretiva de telas e redes de proteção. Garantimos o funcionamento perfeito e a durabilidade dos seus produtos.</p>
+              <Link href="/contact" className="btn-service">
+                Solicitar Manutenção
+              </Link>
+            </div>
+
+            {/* Higienização */}
+            <div className="additional-service-card">
+              <div className="additional-service-icon">
+                <i className="fas fa-spray-can"></i>
+              </div>
+              <h3>Higienização</h3>
+              <p>Limpeza profissional de telas e redes com produtos específicos. Eliminamos sujeira, poeira e resíduos acumulados ao longo do tempo.</p>
+              <Link href="/contact" className="btn-service">
+                Solicitar Higienização
+              </Link>
+            </div>
+
+            {/* Venda de Redes */}
+            <div className="additional-service-card">
+              <div className="additional-service-icon">
+                <i className="fas fa-shopping-cart"></i>
+              </div>
+              <h3>Venda de Redes</h3>
+              <p>Redes de proteção disponíveis para venda separada, com ou sem instalação. Produtos de alta qualidade para você instalar ou contratar nosso serviço.</p>
+              <div className="service-options">
+                <span className="option-badge">Com Instalação</span>
+                <span className="option-badge">Sem Instalação</span>
+              </div>
+              <Link href="/contact" className="btn-service">
+                Consultar Disponibilidade
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Troca de Tramelinhas Section */}
+      <section className="tramelinha-service section-padding" id="tramelinha">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Serviço Especializado</span>
+            <h2 className="section-title">Troca de Tramelinhas</h2>
+          </div>
+
+          <div className="tramelinha-content">
+            <div className="tramelinha-image">
+              <img 
+                src="/assets/img/tramelinha.jpeg" 
+                alt="Tramelinhas" 
+                loading="lazy"
+              />
+            </div>
+            <div className="tramelinha-card">
+              <div className="service-badge">Serviço</div>
+              <h3>Troca de Tramelinhas</h3>
+              <p>Substituição profissional de tramelinhas desgastadas ou danificadas. Utilizamos peças de alta qualidade para garantir a durabilidade e o perfeito funcionamento das suas telas.</p>
+              <ul className="tramelinha-features">
+                <li><i className="fas fa-check"></i> Tramelinhas originais</li>
+                <li><i className="fas fa-check"></i> Instalação rápida</li>
+                <li><i className="fas fa-check"></i> Garantia de qualidade</li>
+                <li><i className="fas fa-check"></i> Atendimento em domicílio</li>
+              </ul>
+              <Link href="/contact" className="btn-primary">
+                Agendar Troca
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

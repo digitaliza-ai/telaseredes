@@ -256,6 +256,42 @@ const Products = () => {
 
         </div>
       </section>
+
+      {/* Custom Quote Card */}
+      <section className="custom-quote section-padding" id="custom-quote">
+        <div className="container">
+          <div className="custom-quote-card">
+            <div className="quote-icon">
+              <i className="fas fa-ruler-combined"></i>
+            </div>
+            <div className="quote-content">
+              <h2>Orçamento Personalizado</h2>
+              <p>Cada projeto é único! Receba um orçamento sob medida para suas necessidades específicas. Nossa equipe está pronta para avaliar seu espaço e oferecer a melhor solução em telas e redes de proteção.</p>
+              <div className="quote-benefits">
+                <div className="benefit-item">
+                  <i className="fas fa-tape"></i>
+                  <span>Medição Gratuita</span>
+                </div>
+                <div className="benefit-item">
+                  <i className="fas fa-file-invoice-dollar"></i>
+                  <span>Orçamento sem Compromisso</span>
+                </div>
+                <div className="benefit-item">
+                  <i className="fas fa-clock"></i>
+                  <span>Resposta Rápida</span>
+                </div>
+                <div className="benefit-item">
+                  <i className="fas fa-thumbs-up"></i>
+                  <span>Garantia de Qualidade</span>
+                </div>
+              </div>
+              <a href="/contact" className="btn-quote">
+                <i className="fas fa-calculator"></i> Solicitar Orçamento Gratuito
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

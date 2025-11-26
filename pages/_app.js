@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import '../src/styles/style.css'
 import '../src/styles/products.css'
 import '../src/styles/products-carrosel.css'
+import '../src/styles/additional-services.css'
 
 export default function App({ Component, pageProps }) {
   return (
